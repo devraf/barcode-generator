@@ -16,7 +16,9 @@ var app = {
   },
   //Makes the actual barcode
   createBarcodes: function() {
-    JsBarcode('.a11', this.barcodeList[0]);
+    for(let i = 0; i < this.barcodeList.length; i++) {
+      JsBarcode(`.${this.classList[i]}`, `${this.barcodeList[i]}`);
+    };
   },
   //TODO limit the class list to 300
   //Unique classes for the first paramater of JS Barcode
@@ -28,20 +30,39 @@ var app = {
       this.classList.push(uniqueClass + i.toString());
     };
   },
+  imgElements: function() {
+     return document.querySelector('.barcodeList').children;
+  },
   //TODO Create SVG element
   //Add unique class to svg element
-  createSVGElement: function() {
+  createImgElement: function() {
     //Update this name to avoid confusion with barcodeList array
     var barcodeList = document.querySelector('.barcodeList');
-    var newSVG = document.createElement('svg');
+    var newImg = document.createElement('img');
 
-    barcodeList.appendChild(newSVG);
-  }
+    barcodeList.appendChild(newImg);
+  },
+  //Add svg elements based on the length of the barcode list array
+  addAllImgElements: function() {
+    for(let i = 0; i < this.barcodeList.length; i++) {
+      this.createImgElement();
+    }
+  },
   //TODO add unique classes to each svg element
+  addClassToImg: function() {
+    var barcodeListChildren = document.querySelector('.barcodeList').children;
+    for(let i = 0; i < this.barcodeList.length; i++) {
+      barcodeListChildren[i].classList.add(this.classList[i]);
+    }
+  }
 };
 
 function test() {
-  if (barcodeTextInput.value === '') {
-    console.log('empty');
-  } else console.log('notEmpty');
+  app.createBarcodeList();
+  console.log(app.barcodeList);
+  app.createClasses();
+  console.log(app.classList);
+  app.addAllImgElements();
+  app.addClassToImg();
+  app.imgElements();
 };
