@@ -21,15 +21,23 @@ var app = {
   //TODO limit the class list to 300
   //Unique classes for the first paramater of JS Barcode
   classList: [],
-  //TODO Make unique classes based on the barcodeList length
+  //Makes unique classes based on the barcodeList array length
   createClasses: function() {
     var uniqueClass = 'a';
     for (let i = 10; i < this.barcodeList.length + 10; i++) {
-      console.log(i);
+      this.classList.push(uniqueClass + i.toString());
     };
-  }
+  },
   //TODO Create SVG element
   //Add unique class to svg element
+  createSVGElement: function() {
+    //Update this name to avoid confusion with barcodeList array
+    var barcodeList = document.querySelector('.barcodeList');
+    var newSVG = document.createElement('svg');
+
+    barcodeList.appendChild(newSVG);
+  }
+  //TODO add unique classes to each svg element
 };
 
 function test() {
