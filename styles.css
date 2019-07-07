@@ -1,0 +1,104 @@
+body {
+	background-color: #FFFFFF;
+	font-family: franklin-gothic-urw-cond, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+
+}
+
+p {
+	font-size: 13px;
+	line-height: 18px;
+	color: #008296;
+}
+
+h1 {
+	font-size: 24px;
+	line-height: 40px;
+	margin: -10px;
+}
+
+button {
+	font-weight: bold;
+	font-size: 13px;
+	color: #FFFFFF;
+	letter-spacing: 0.06px;
+	line-height: 16px;
+	background-color: #008296;
+	box-shadow: 0 1px 2px 0 #B5B5B5;
+	border-radius: 1px;
+	padding: 10px;
+	border: solid 1px #008296;
+	margin: 10px;
+	vertical-align: bottom;
+}
+
+button:hover {
+	background-color: #006878;
+}
+
+textarea {
+	border: solid 1px #D5DBDB;
+	margin-right: 15px;
+}
+
+#wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-auto-rows: minmax(auto, auto);
+	margin-bottom: 40px;
+}
+
+#header {
+	grid-column-start: span 3;
+	color: #002F36;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+#barcodeWorkSpace {
+	grid-column-start: span 3;
+	border-top: solid 1px #879596;
+	border-bottom: solid 1px #879596;
+	background-color: #FAFAFA;
+	padding: 10px;
+	margin-bottom: 10px;
+}
+
+#footer {
+	grid-column-start: span 3;
+	border: 2px solid black;
+	border-radius: 10px;
+}
+
+#barcode {
+	grid-column-start: span 3;
+	background-color: #002F36;
+}
+
+.addedImg {
+	border: solid .75px white;
+	border-radius: 10px;
+	width: auto;
+	height: auto;
+	margin: 10px;
+}
+
+.addedDiv {
+	width 100%;
+	height: 10px;
+}
+
+#bottomBar {
+	height: 40px;
+	position: fixed;
+	bottom: 0px;
+	right: 8px;
+	background-color: #FFFFFF;
+}
+
+#bottomBar button {
+	margin: 0px;
+}

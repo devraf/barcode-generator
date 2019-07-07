@@ -1,36 +1,38 @@
-<!DOCTYPE html>
-<html lang="en-US">
+ <!DOCTYPE html>
+ <html>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Barcode Generator Plus</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+ <head>
+ 	<meta charset="UTF-8">
+ 	<meta name="viewport" content="width=device-width,initial-scale=1">
+ 	<title>Barcodes</title>
+ 	<link rel="stylesheet" href="https://use.typekit.net/iov7ppz.css">
+ 	<link rel="stylesheet" href="styles.css" type="text/css">
 
-<body>
-  <div class="container">
-    <div class="header">
-      <h1>Barcode Generator +</h1>
-    </div>
-    <div class="barcodeApp">
-      <select class="barcodeType" name="barcodeType">
-        <option value="CODE128 auto">CODE128 auto</option>
-      </select>
-      <textarea class="barcodeTextList" name="barcodeList" rows="7" cols="28" wrap="hard"></textarea>
-      <div class="buttons">
-        <button class="create" type="button" name="create">Create</button>
-        <button class="print" type="button" name="print">Print</button>
-      </div>
-    </div>
-    <div class="barcodeList">
-    </div>
-    <div class="footer">
-      <span>placeholder for feedback icon | opensource clause | back to top icon</span>
-    </div>
-  </div>
-  <script src="JsBarcode.code128.min.js"></script>
-  <script src="app.js"></script>
-</body>
+ </head>
 
-</html>
+ <body>
+ 	<div id="wrapper">
+ 		<div id="header">
+ 			<h1>Barcode Generator (Beta)</h1>
+ 		</div>
+ 		<div id="barcodeWorkSpace">
+ 			<textarea id="barcodeTextAreaInput" cols="30" rows="10"></textarea>
+ 			<button id="createBarcodes">Create Barcodes</button>
+ 			<button id="removeBarcodes">Clear Barcodes</button>
+ 			<p><a href="mailto:peralesr@amazon.com?Subject=Barcode%20Generator%20Feedback" target="_top">Leave
+ 					feedback</a></p>
+ 		</div>
+
+ 		<div id="barcode">
+
+ 		</div>
+
+ 		<div id="bottomBar">
+ 			<button id="scrollUpToTop">Back to Top</button>
+ 		</div>
+ 	</div>
+ 	<script type="text/javascript" src="app.js"></script>
+ 	<script type="text/javascript" src="JsBarcode.all.js"></script>
+ </body>
+
+ </html>
